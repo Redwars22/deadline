@@ -65,6 +65,10 @@ export default function DeadlineEditor({ navigation, route }) {
     if (route?.params?.mode === 'edit') {
       await updateNote(note);
     } else await saveNotes(note);
+
+    if(route?.params?.mode !== "edit"){
+      navigation.navigate('Home');
+    }
   };
 
   const handleDeleteNote = async () => {
@@ -123,7 +127,6 @@ export default function DeadlineEditor({ navigation, route }) {
               <Pressable
                 onPress={async () => {
                   await handleSaveNotes();
-                  navigation.navigate('Home');
                 }}>
                 <Feather name="save" size={24} color="grey" />
               </Pressable>
@@ -151,7 +154,7 @@ export default function DeadlineEditor({ navigation, route }) {
             <Picker.Item label="Atenção" value="warning" />
             <Picker.Item label="Urgente" value="urgent" />
           </Picker>
-          <Text>Criado em: {note.date}</Text>
+          <Text>Editado pela última vez em: {note.date}</Text>
           <TextInput
             style={{
               ...styles.input,

@@ -14,7 +14,7 @@ export default function App() {
 
   return (
     <>
-      <StatusBar StatusBarStyle="light-content" />
+      <StatusBar StatusBarStyle="dark-content" />
       <View style={styles.container}>
         <NavigationContainer>
           <Stack.Navigator>

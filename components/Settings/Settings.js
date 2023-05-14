@@ -67,10 +67,22 @@ export default function DeadlineSettings({ navigation }) {
               marginBottom: 10,
             }}>
             <Button
-              title={'Visite meu GitHub'}
+              title={'Site do AndrewNation'}
               color={'grey'}
               onPress={() =>
                 Linking.openURL('https://andrewnation.vercel.app/')
+              }
+            />
+          </View>
+                    <View
+            style={{
+              marginBottom: 10,
+            }}>
+            <Button
+              title={'Repositório GitHub'}
+              color={'grey'}
+              onPress={() =>
+                Linking.openURL('https://github.com/Redwars22/deadline')
               }
             />
           </View>
@@ -90,7 +102,7 @@ export default function DeadlineSettings({ navigation }) {
             color: 'grey',
             textAlign: 'center',
           }}>
-          Deadline, versão 1.0.1 Pré-Lançamento. Desenvolvido por AndrewNation
+          Deadline, versão 1.2.0. Desenvolvido por AndrewNation
         </Text>
       </View>
     </>
